@@ -70,4 +70,11 @@
          will be charged between (limit - val) and limit. -->
     <integer name="config_chargingControlBatteryRechargeMargin">1</integer>
 
+    <!-- The list of packages to automatically opt out of refresh rates higher than 60hz because
+	 of known compatibility issues. -->
+    <string-array name="config_highRefreshRateBlacklist">
+        <item>"com.netflix.mediaclient"</item>
+        <item>"com.zhiliaoapp.musically"</item>
+    </string-array>
+
 </resources>
