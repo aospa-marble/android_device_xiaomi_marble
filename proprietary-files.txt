@@ -1949,10 +1949,6 @@ vendor/lib64/vendor.qti.hardware.trustedui@1.1.so
 vendor/lib64/vendor.qti.hardware.trustedui@1.2.so
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
 
-# USB
-vendor/bin/init.qcom.usb.sh
-vendor/etc/init/hw/init.qcom.usb.rc
-
 # VPU firmware
 vendor/firmware/vpu20_4v.b00
 vendor/firmware/vpu20_4v.b01
