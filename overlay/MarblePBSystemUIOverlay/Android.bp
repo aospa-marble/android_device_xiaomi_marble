@@ -1,12 +1,11 @@
 //
-// Copyright (C) 2022 Paranoid Android
+// Copyright (C) 2024 Paranoid Android
 //
 // SPDX-License-Identifier: Apache-2.0
 //
 
 runtime_resource_overlay {
-    name: "MarbleCarrierConfigOverlay",
-    aaptflags: ["--keep-raw-values"],
+    name: "MarblePBSystemUIOverlay",
     sdk_version: "current",
     device_specific: true,
 }

@@ -49,6 +49,7 @@ PRODUCT_ODM_PROPERTIES += \
 PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.audio.auto.scenario=true \
     persist.vendor.audio.misound.disable=true \
+    ro.audio.monitorRotation=true \
     ro.audio.spatializer_enabled=true \
     ro.config.alarm_vol_steps=15 \
     ro.config.system_vol_steps=15 \
@@ -111,6 +112,10 @@ PRODUCT_VENDOR_PROPERTIES += \
 PRODUCT_CHARACTERISTICS := nosdcard
 
 # Cutout
+PRODUCT_PACKAGES += \
+    AvoidAppsInCutoutOverlay \
+    NoCutoutOverlay
+
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.support_hide_display_cutout=true
 
@@ -131,8 +136,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_ODM_PROPERTIES += \
     persist.sys.sf.color_mode=0 \
     ro.surface_flinger.enable_frame_rate_override=false \
-    ro.surface_flinger.set_idle_timer_ms=500 \
-    ro.surface_flinger.set_touch_timer_ms=1000 \
+    ro.surface_flinger.set_idle_timer_ms=1100 \
+    ro.surface_flinger.set_touch_timer_ms=200 \
     vendor.display.disable_3d_adaptive_tm=0 \
     vendor.display.enable_rounded_corner=0
 
@@ -143,8 +148,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.sys.sf.native_mode=258 \
     ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.taro.api32 \
     ro.vendor.display.ai_disp.enable=true \
-    ro.vendor.display.framework_thermal_dimming=true \
-    ro.vendor.display.hwc_thermal_dimming=false \
+    ro.vendor.display.hwc_thermal_dimming=true \
     ro.vendor.display.mi_calib.enable=true \
     ro.vendor.display.nature_mode.enable=true \
     ro.vendor.histogram.enable=true \
@@ -227,6 +231,7 @@ PRODUCT_VENDOR_PROPERTIES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/bin/init.kernel.post_boot.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.kernel.post_boot.sh \
     $(LOCAL_PATH)/rootdir/bin/init.marble.perf.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.marble.perf.sh \
+    $(LOCAL_PATH)/rootdir/bin/init.marble.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.marble.sh \
     $(LOCAL_PATH)/rootdir/etc/init.marble.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.marble.rc \
     $(LOCAL_PATH)/rootdir/etc/init.marble.perf.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.marble.perf.rc \
     $(LOCAL_PATH)/rootdir/etc/init.target.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.target.rc \
@@ -303,6 +308,10 @@ PRODUCT_VENDOR_PROPERTIES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_codecs_dolby_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_dolby_audio.xml
 
+# Mlipay
+PRODUCT_PACKAGES += \
+    IFAAService
+
 # NDK
 NEED_AIDL_NDK_PLATFORM_BACKEND := true
 
@@ -319,7 +328,6 @@ PRODUCT_PACKAGES += \
     AOSPAMarbleFrameworksOverlay \
     AOSPAMarbleSettingsOverlay \
     AOSPAMarbleSystemUIOverlay \
-    AvoidAppsInCutoutOverlay \
     MarbleApertureOverlay \
     MarbleCNSettingsOverlay \
     MarbleCNSettingsProviderOverlay \
@@ -336,11 +344,11 @@ PRODUCT_PACKAGES += \
     MarbleINWifiOverlay \
     MarbleINWifiMainlineOverlay \
     MarbleNfcOverlay \
+    MarblePBSystemUIOverlay \
     MarbleSettingsOverlay \
     MarbleSystemUIOverlay \
     MarbleWifiOverlay \
-    MarbleWifiMainlineOverlay \
-    NoCutoutOverlay
+    MarbleWifiMainlineOverlay
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
@@ -351,9 +359,10 @@ PRODUCT_COPY_FILES += \
 
 # Perf
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf \
     $(LOCAL_PATH)/configs/perf/commonresourceconfigs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/commonresourceconfigs.xml \
     $(LOCAL_PATH)/configs/perf/perfboostsconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/perfboostsconfig.xml \
+    $(LOCAL_PATH)/configs/perf/perfconfigstore.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/perfconfigstore.xml \
+    $(LOCAL_PATH)/configs/perf/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml \
     $(LOCAL_PATH)/configs/perf/targetresourceconfigs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/targetresourceconfigs.xml
 
 PRODUCT_ODM_PROPERTIES += \
@@ -390,6 +399,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.data.iwlan.enable=true \
     persist.vendor.radio.add_power_save=1 \
     persist.vendor.radio.dynamic_sar=1 \
+    persist.vendor.radio.redir_party_num=0 \
     ro.vendor.radio.build_profile=u-stable
 
 # Sensors
