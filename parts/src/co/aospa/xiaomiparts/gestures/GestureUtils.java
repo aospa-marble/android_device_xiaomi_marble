@@ -44,6 +44,12 @@ public class GestureUtils {
         }
     }
 
+    public static void onBootCompleted(Context context) {
+        if (isFpDoubleTapEnabled(context)) {
+            setFingerprintNavigation(true);
+        }
+    }
+
     public static boolean isFpDoubleTapEnabled(Context context) {
         return Settings.System.getIntForUser(context.getContentResolver(), SETTING_KEY_ENABLE,
                 0, UserHandle.USER_CURRENT) == 1;
