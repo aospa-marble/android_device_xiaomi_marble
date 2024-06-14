@@ -139,6 +139,7 @@ PRODUCT_ODM_PROPERTIES += \
     ro.surface_flinger.enable_frame_rate_override=false \
     ro.surface_flinger.set_idle_timer_ms=1100 \
     ro.surface_flinger.set_touch_timer_ms=200 \
+    ro.surface_flinger.supports_background_blur=0 \
     vendor.display.disable_3d_adaptive_tm=0 \
     vendor.display.enable_rounded_corner=0
 
