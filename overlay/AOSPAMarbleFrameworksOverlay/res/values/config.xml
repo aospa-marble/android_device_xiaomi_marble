@@ -29,7 +29,8 @@
     <bool name="config_enableKeyHandler">true</bool>
 
     <!-- Gestures' key codes. If the gesture is not supported set it to 0. -->
-    <integer name="config_doubleTapKeyCode">143</integer>
+    <integer name="config_doubleTapKeyCode">143</integer> <!-- KEY_POWER -->
+    <integer name="config_singleTapKeyCode">354</integer> <!-- KEY_GOTO -->
 
     <!-- Default settings for gestures:
              0 - Disabled
@@ -43,6 +44,7 @@
              8 - Camera
              9 - Dialer -->
     <integer name="config_doubleTapDefault">1</integer>
+    <integer name="config_singleTapDefault">2</integer>
 
     <!-- Build fingerprint from stock ROM -->
     <string name="config_stockFingerprint" translatable="false">POCO/marble_global/marble:14/UKQ1.230804.001/V816.0.2.0.UMRMIXM:user/release-keys</string>
