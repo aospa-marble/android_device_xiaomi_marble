@@ -33,6 +33,7 @@ import co.aospa.xiaomiparts.doze.PocketService;
 import co.aospa.xiaomiparts.gestures.GestureUtils;
 import co.aospa.xiaomiparts.thermal.ThermalUtils;
 import co.aospa.xiaomiparts.touch.HighTouchPollingService;
+import co.aospa.xiaomiparts.touch.TouchNonUiService;
 import co.aospa.xiaomiparts.touch.TouchOrientationService;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
@@ -53,6 +54,7 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         NfcCameraService.startService(context);
         HighTouchPollingService.startService(context);
         TouchOrientationService.startService(context);
+        TouchNonUiService.startService(context);
         ThermalUtils.startService(context);
         GestureUtils.onBootCompleted(context);
         overrideHdrTypes(context);
