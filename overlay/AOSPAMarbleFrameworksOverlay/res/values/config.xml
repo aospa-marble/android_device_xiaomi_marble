@@ -44,7 +44,7 @@
              8 - Camera
              9 - Dialer -->
     <integer name="config_doubleTapDefault">1</integer>
-    <integer name="config_singleTapDefault">2</integer>
+    <integer name="config_singleTapDefault">0</integer>
 
     <!-- Build fingerprint from stock ROM -->
     <string name="config_stockFingerprint" translatable="false">POCO/marble_global/marble:14/UKQ1.230804.001/V816.0.2.0.UMRMIXM:user/release-keys</string>
