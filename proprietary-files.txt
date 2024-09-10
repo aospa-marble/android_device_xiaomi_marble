@@ -493,6 +493,7 @@ vendor/lib64/libquickcamera.so
 vendor/lib64/librelight_only.so
 vendor/lib64/libremosaic_wrapper.so
 vendor/lib64/libremosaiclib.so
+vendor/lib64/librmsclib1.so
 vendor/lib64/libsfeShiftExtrapolation.so
 vendor/lib64/libsnpe_dsp_domains_v2.so
 vendor/lib64/libsnpe_dsp_domains_v3.so
@@ -1498,8 +1499,8 @@ vendor/lib64/vendor.dolby.hardware.dms@2.0.so|e1aced930abf83580d980d40f9adb7aa3b
 
 # Media (Dolby Vision)
 vendor/bin/hw/dolbycodec2|3be3be9e6e7e5a2190238d5ac1116cce63bea781
-vendor/etc/dolby_vision.cfg
 vendor/etc/dolby/dax-default.xml
+vendor/etc/dolby_vision.cfg
 vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc:vendor/etc/init/dolbycodec2.rc
 vendor/lib64/c2.dolby.avc.dec.so
 vendor/lib64/c2.dolby.avc.sec.dec.so
