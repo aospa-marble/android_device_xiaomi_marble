@@ -49,4 +49,7 @@
     <!-- Maximum number of notification icons shown in the status bar (excluding overflow dot) -->
     <integer name="max_notif_static_icons">5</integer>
 
+    <!-- Microns/ums (1000 um = 1mm) per pixel for the given device. If unspecified, UI that
+         relies on this value will not be sized correctly. -->
+    <item format="float" name="pixel_pitch" type="dimen">64.37</item>
 </resources>
