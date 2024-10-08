@@ -160,7 +160,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     vendor.display.idle_time=0
 
 # Doze
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     ParanoidDoze
 
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
