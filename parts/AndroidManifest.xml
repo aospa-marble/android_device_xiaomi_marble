@@ -77,11 +77,6 @@
         </service>
 
         <service
-            android:name=".camera.NfcCameraService"
-            android:permission="NfcCameraService">
-        </service>
-
-        <service
             android:name=".doze.AodBrightnessService"
             android:permission="AodBrightnessService">
         </service>
