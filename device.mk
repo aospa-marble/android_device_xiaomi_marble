@@ -145,7 +145,6 @@ PRODUCT_ODM_PROPERTIES += \
 
 PRODUCT_VENDOR_PROPERTIES += \
     debug.sf.defer_refresh_rate_when_off=1 \
-    debug.sf.disable_backpressure=1 \
     debug.sf.frame_rate_multiple_threshold=120 \
     persist.sys.sf.native_mode=258 \
     ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.taro.api32 \
