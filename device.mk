@@ -311,8 +311,7 @@ PRODUCT_COPY_FILES += \
 
 # Mlipay
 PRODUCT_PACKAGES += \
-    IFAAService \
-    vendor.xiaomi.hardware.mlipay@1.1.vendor
+    IFAAService
 
 # NDK
 NEED_AIDL_NDK_PLATFORM_BACKEND := true
