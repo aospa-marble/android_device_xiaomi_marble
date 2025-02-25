@@ -1466,7 +1466,6 @@ vendor/lib64/libvpphcp.so
 vendor/lib64/libvpphvx.so
 vendor/lib64/libvppimmotion.so
 vendor/lib64/libvpplibrary.so
-vendor/lib64/vendor.qti.hardware.vpp@2.0.so
 
 # Media (Dolby Audio) - from nuwa HyperOS 1.0.6.0.UMBMIXM
 vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service|d4055176a2b1bae0710b791cd1b7cb3d3dfbbbd9
