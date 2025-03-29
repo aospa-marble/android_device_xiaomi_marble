@@ -1,4 +1,4 @@
-# Device proprietary files - from marble OS1.0.14.0.UMRCNXM package, unless pinned
+# Device proprietary files - from marble OS2.0.5.0.VMRCNXM package, unless pinned
 
 # ADSP
 vendor/bin/adsprpcd
