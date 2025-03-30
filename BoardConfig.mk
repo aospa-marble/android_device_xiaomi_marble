@@ -48,6 +48,9 @@ ODM_MANIFEST_MARBLE_FILES := $(DEVICE_PATH)/configs/hidl/manifest_nfc.xml
 # Health
 TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_BYPASS := false
 
+# Firmware
+-include vendor/xiaomi/marble-firmware/config.mk
+
 # Init
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_marble
 TARGET_RECOVERY_DEVICE_MODULES := libinit_marble
