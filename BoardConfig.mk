@@ -12,7 +12,7 @@ HARDWARE_PATH := hardware/xiaomi
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv9-a
 TARGET_CPU_ABI := arm64-v8a
-TARGET_CPU_VARIANT := cortex-a510
+TARGET_CPU_VARIANT := kryo785
 
 # A/B
 AB_OTA_UPDATER := true
@@ -67,13 +67,15 @@ BOARD_KERNEL_CMDLINE := \
     swinfo.fingerprint=$(AOSPA_VERSION) \
     allow_file_spec_access \
     irqaffinity=0-3 \
-    pelt=8
+    pelt=8 \
+    androidboot.selinux=permissive
 
 BOARD_BOOTCONFIG := \
     androidboot.hardware=qcom \
     androidboot.init_fatal_reboot_target=recovery \
     androidboot.memcg=1 \
-    androidboot.usbcontroller=a600000.dwc3
+    androidboot.usbcontroller=a600000.dwc3 \
+    androidboot.selinux=permissive
 
 # OTA
 TARGET_OTA_ASSERT_DEVICE := marble|marblein

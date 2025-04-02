@@ -435,7 +435,9 @@ endif
 
 # VNDK
 PRODUCT_PACKAGES += \
-    libutils-shim
+    libutils-shim \
+    libhidlbase_shim.vendor \
+    libcodec2_hidl_shim.vendor
 
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v33/arm64/arch-arm64-armv8-a/shared/vndk-core/libstagefright_foundation.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstagefright_foundation-v33.so
