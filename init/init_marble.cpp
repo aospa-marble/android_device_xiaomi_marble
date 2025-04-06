@@ -84,10 +84,13 @@ void vendor_load_properties() {
 
     if (region == "CN") { // China
         set_device_props("Redmi", "marble", "23049RAD8C", "marble", "Redmi Note 12 Turbo");
+	property_override("ro.product.mod_device", "marble");
     } else if (region == "IN") { // India
         set_device_props("POCO", "marblein", "23049PCD8I", "marblein", "POCO F5");
+        property_override("ro.product.mod_device", "marble_in_global");
     } else { // Global
         set_device_props("POCO", "marble", "23049PCD8G", "marble_global", "POCO F5");
+        property_override("ro.product.mod_device", "marble_global");
     }
 
     // Set hardware revision
