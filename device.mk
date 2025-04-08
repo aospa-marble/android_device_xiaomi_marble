@@ -121,7 +121,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.support_hide_display_cutout=true
 
 # Dalvik
-$(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
+$(call inherit-product, frameworks/native/build/phone-xhdpi-8192-dalvik-heap.mk)
 
 # Device Settings
 PRODUCT_PACKAGES += \
