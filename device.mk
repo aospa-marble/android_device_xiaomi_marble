@@ -393,7 +393,7 @@ PRODUCT_SHIPPING_API_LEVEL := 31
 
 # Thermal
 PRODUCT_PACKAGES += \
-    android.hardware.thermal@2.0-service.qti-v2
+    android.hardware.thermal-service.qti
 
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v33/arm64/arch-arm64-armv8-a/shared/vndk-core/libstagefright_foundation.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstagefright_foundation-v33.so
