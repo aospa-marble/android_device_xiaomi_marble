@@ -135,7 +135,6 @@ $(foreach did, 4630946370515662721 4630946370515662722 4630946480857061761 46309
     $(LOCAL_PATH)/configs/displayconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_$(did).xml)
 
 PRODUCT_PACKAGES += \
-    libgui_vendor \
     vendor.qti.hardware.memtrack-service
 
 PRODUCT_ODM_PROPERTIES += \
@@ -171,10 +170,6 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
     ro.sensor.pickup=xiaomi.sensor.pickup \
     ro.sensor.pickup.lower.value=2 \
     ro.sensor.proximity=true
-
-# DPM
-PRODUCT_PACKAGES += \
-    libhidlbase_shim
 
 PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.dpm.vndr.feature=1 \
@@ -373,7 +368,6 @@ PRODUCT_PACKAGES += \
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors-service.multihal \
-    libsensorndkbridge \
     sensor-notifier
 
 PRODUCT_COPY_FILES += \
@@ -394,9 +388,6 @@ PRODUCT_SHIPPING_API_LEVEL := 31
 # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal-service.qti
-
-PRODUCT_COPY_FILES += \
-    prebuilts/vndk/v33/arm64/arch-arm64-armv8-a/shared/vndk-core/libstagefright_foundation.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstagefright_foundation-v33.so
 
 # Shipping API
 PRODUCT_SHIPPING_API_LEVEL := 33
